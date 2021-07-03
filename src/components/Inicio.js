@@ -27,6 +27,10 @@ const Inicio = () => {
 const Contenedor = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @media only screen and (max-width: 1145px) {
+        grid-template-columns:1fr;
+      }
 `;
 const ContenedorImagen = styled.div`
     width:100%;
@@ -58,7 +62,7 @@ const ContenedorImagen = styled.div`
     }
     img{
     width:700px;
-    height:400px;
+    height:350px;
     }
     
 `;
@@ -72,8 +76,15 @@ const Texto = styled.div`
     p{
         color:#ffff;
         font-size:15px;
+        font-weight: 900;
         padding:10px 20px;
     }
+    @media (max-width: 600px) {
+        p{
+            font-size:13px;
+            font-weight: 700;
+        }
+      }
 `;
 const Aumentar = styled.div`
     width:100%;
