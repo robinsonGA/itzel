@@ -79,7 +79,7 @@ const Texto = styled.div`
         font-weight: 900;
         padding:10px 20px;
     }
-    @media (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
         p{
             font-size:13px;
             font-weight: 700;

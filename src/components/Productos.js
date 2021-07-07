@@ -39,11 +39,8 @@ const Productos = () => {
                     );
                 })
             }
-            <div>
             <Paginacion productosPorPagina={productosPorPagina} productosTotales={productos.length} paginar={paginar}></Paginacion>
-           
-            </div>
-            
+
         </ContenedorProductos>
     );
 }
@@ -51,9 +48,11 @@ const ContenedorProductos = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
+    justify-items: center;
     gap: 4px;
     padding: 0;
-    @media (max-width: 900px) {
+    @media only screen and  (max-width: 900px) {
+        display: grid;
         grid-template-columns:repeat(2, 1fr);
         justify-items: center;
         gap: 5px 4px;
@@ -105,7 +104,21 @@ const Producto = styled.div`
         transform:translateY(-15px);
         box-shadow:0 12px 16px rgba(0,0,0,0,0.2);
     }
-    @media (max-width: 600px) {
+    @media only screen and (max-width: 1166px) {
+        width:250px;
+        height:250px;
+        //overflow:hidden;
+        img{
+            width:250px;
+            height:240px;
+        }
+        h1{
+            font-size:15px;
+            text-align: center;
+            letter-spacing:3px;
+        }
+    }
+    @media only screen and (max-width: 600px) {
         width:170px;
         height:230px;
         //overflow:hidden;
@@ -119,19 +132,6 @@ const Producto = styled.div`
             letter-spacing:3px;
         }
     }
-    @media (max-width: 1166px) {
-        width:250px;
-        height:250px;
-        overflow:hidden;
-        img{
-            width:250px;
-            height:240px;
-        }
-        h1{
-            font-size:15px;
-            text-align: center;
-            letter-spacing:3px;
-        }
-    }
+   
 `;
 export default Productos;

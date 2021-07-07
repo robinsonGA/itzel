@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 const Paginacion = ({ productosPorPagina, productosTotales, paginar }) => {
     const numeroDePagina = [];
     for (let index = 1; index <= Math.ceil(productosTotales / productosPorPagina); index++) {
@@ -6,7 +7,7 @@ const Paginacion = ({ productosPorPagina, productosTotales, paginar }) => {
     }
     console.log(Math.ceil(productosTotales / productosPorPagina));
     return (
-        <nav>
+        <Pagination>
             <ul>
                 {numeroDePagina.map(numero => (
                     <li key={numero}>
@@ -16,7 +17,20 @@ const Paginacion = ({ productosPorPagina, productosTotales, paginar }) => {
                     </li>
                 ))}
             </ul>
-        </nav>);
+        </Pagination>);
 }
-
+const Pagination = styled.nav`
+    grid-column: span 3;
+    @media only screen and (max-width: 900px) {
+        grid-column: span 2;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+    }
+    li{
+        list-style:none;
+        margin-left:10px;
+    }
+`;
 export default Paginacion;

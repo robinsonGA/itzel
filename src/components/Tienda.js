@@ -4,12 +4,10 @@ import Productos from './Productos';
 
 const Tienda = ({ productos, agregarProductoAlCarrito }) => {
     return (
-        <div>
             <Productos
                 productos={productos}
                 agregarProductoAlCarrito={agregarProductoAlCarrito}
             ></Productos>
-        </div>
     );
 }
 
