@@ -5,9 +5,9 @@ import styled from 'styled-components';
 const Pie = () => {
     return (
         <PiePagina>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fab fa-instagram-square"></i></a>
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i className="fab fa-whatsapp"></i></a>
+            <a href="#"><i className="fab fa-instagram-square"></i></a>
+            <a href="#"><i className="fab fa-facebook-square"></i></a>
         </PiePagina>
     );
 }

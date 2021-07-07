@@ -31,11 +31,11 @@ const App = () => {
 
 const Contenedor = styled.div`
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height:100vh;
     padding: 40px;
-    width: 90%;
+    width: 100vw;
     gap: 10px;
     margin: 40px 0;
 `;
