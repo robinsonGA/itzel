@@ -24,6 +24,9 @@ const Pagination = styled.nav`
     @media only screen and (max-width: 900px) {
         grid-column: span 2;
     }
+    @media only screen and (max-width: 450px) {
+        grid-column: span 1;
+    }
     ul{
         display: flex;
         justify-content: center;

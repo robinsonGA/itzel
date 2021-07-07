@@ -52,11 +52,13 @@ const ContenedorProductos = styled.div`
     gap: 4px;
     padding: 0;
     @media only screen and  (max-width: 900px) {
-        display: grid;
         grid-template-columns:repeat(2, 1fr);
         justify-items: center;
         gap: 5px 4px;
         padding: 0;
+    }
+    @media only screen and  (max-width: 450px) {
+        grid-template-columns:1fr;
     }
     
 `;
